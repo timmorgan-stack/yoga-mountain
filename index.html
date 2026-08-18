@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="%23fbf8f2"/><circle cx="50" cy="20" r="9" fill="%23e8b83c"/><path d="M34 37h32a16 16 0 0 1-32 0Z" fill="%236f5b7e"/><path d="M27 54h46a23 23 0 0 1-46 0Z" fill="%237fb0aa"/><path d="M18 72h64a32 32 0 0 1-64 0Z" fill="%2363896f"/></svg>'>
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Yoga Mountain — hatha yoga, breathwork and deep relaxation with Hannah Dunford in Enniskerry, Shankill and Bray, Co. Wicklow. Weekly classes, private tuition, kids and teen yoga, and seasonal day retreats.">
+<title>Yoga Mountain</title>
+<style>
+/* ============ tokens ============ */
+:root{
+  --paper:#fbf8f2; --paper-2:#f2ece0; --card:#ffffff;
+  --ink:#1a2620; --ink-2:#47554c; --ink-3:#66756b;
+  --line:rgba(26,38,32,.13); --line-2:rgba(26,38,32,.07);
+  --sage:#6f9179; --sage-2:#82a68c; --forest:#1d2b24; --forest-2:#27392f;
+  --plum:#6f5b7e; --gold:#d1a13f; --sage-deep:#3d6350;
+  --on-forest:#ece7dc; --on-forest-2:#b3c2b6;
+  --shadow:0 1px 2px rgba(26,38,32,.05), 0 14px 34px -18px rgba(26,38,32,.28);
+  --shadow-lg:0 2px 4px rgba(26,38,32,.06), 0 30px 60px -30px rgba(26,38,32,.4);
+  --r:14px; --r-lg:22px;
+  --serif:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,'Helvetica Neue',Arial,sans-serif;
+  --maxw:1180px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#11160f; --paper-2:#181f18; --card:#1a221b;
+    --ink:#e9e4d8; --ink-2:#b3bdb1; --ink-3:#8a968b;
+    --line:rgba(233,228,216,.15); --line-2:rgba(233,228,216,.08);
+    --sage:#8fb298; --sage-2:#a3c2aa; --forest:#0d120d; --forest-2:#182018;
+    --plum:#a892b6; --gold:#e0b862; --sage-deep:#a3c2aa;
+    --on-forest:#e9e4d8; --on-forest-2:#a9b8ac;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -18px rgba(0,0,0,.7);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11160f; --paper-2:#181f18; --card:#1a221b;
+  --ink:#e9e4d8; --ink-2:#b3bdb1; --ink-3:#8a968b;
+  --line:rgba(233,228,216,.15); --line-2:rgba(233,228,216,.08);
+  --sage:#8fb298; --sage-2:#a3c2aa; --forest:#0d120d; --forest-2:#182018;
+  --plum:#a892b6; --gold:#e0b862; --sage-deep:#a3c2aa;
+  --on-forest:#e9e4d8; --on-forest-2:#a9b8ac;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -18px rgba(0,0,0,.7);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,.9);
+}
+
+/* ============ base ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,6.2vw,4.6rem)}
+h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+h3{font-size:clamp(1.25rem,2vw,1.5rem)}
+p{margin:0 0 1.1em}
+.wrap{width:min(100% - 2.4rem,var(--maxw));margin-inline:auto}
+.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:600;color:var(--sage-deep);margin:0 0 1rem}
+.lede{font-size:clamp(1.05rem,1.5vw,1.22rem);color:var(--ink-2);max-width:62ch}
+section{padding:clamp(4.5rem,9vw,8rem) 0;position:relative}
+.section-head{max-width:64ch;margin-bottom:clamp(2.5rem,5vw,4rem)}
+:focus-visible{outline:2.5px solid var(--sage);outline-offset:3px;border-radius:4px}
+
+/* ============ buttons ============ */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--sans);font-size:.94rem;
+  font-weight:600;letter-spacing:.01em;padding:.92rem 1.5rem;border-radius:100px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.3,1),background .25s,color .25s,border-color .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--forest);color:var(--on-forest);box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--forest-2);box-shadow:var(--shadow-lg)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage)}
+.btn-light{background:var(--on-forest);color:var(--forest)}
+.btn-outline-light{border-color:rgba(236,231,220,.4);color:var(--on-forest)}
+.btn-outline-light:hover{border-color:var(--on-forest);background:rgba(236,231,220,.08)}
+.btn .arw{transition:transform .25s}
+.btn:hover .arw{transform:translateX(3px)}
+
+/* ============ concept strip ============ */
+.concept{background:var(--forest);color:var(--on-forest-2);font-size:.76rem;letter-spacing:.04em;
+  padding:.55rem 1.2rem;text-align:center}
+.concept b{color:var(--on-forest);font-weight:600}
+
+/* ============ header ============ */
+.hdr{position:sticky;top:0;z-index:60;transition:background .3s,box-shadow .3s,backdrop-filter .3s;
+  border-bottom:1px solid transparent}
+.hdr.solid{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px) saturate(1.4);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom-color:var(--line-2);box-shadow:0 1px 24px -12px rgba(0,0,0,.3)}
+.hdr-in{display:flex;align-items:center;gap:1.4rem;padding:.85rem 0;min-height:68px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-right:auto}
+.brand svg{width:34px;height:34px;flex:none}
+.brand-txt{font-family:var(--serif);line-height:1;letter-spacing:.11em;text-transform:uppercase;font-size:.86rem}
+.brand-txt span{display:block;color:var(--ink-2);font-size:.72rem;letter-spacing:.19em;margin-top:.22rem}
+.nav{display:flex;align-items:center;gap:.35rem}
+.nav a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--ink-2);padding:.5rem .78rem;border-radius:100px;
+  transition:color .2s,background .2s}
+.nav a:hover{color:var(--ink);background:var(--line-2)}
+.hdr .btn{padding:.66rem 1.15rem;font-size:.86rem}
+.icon-btn{display:none;background:none;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;
+  align-items:center;justify-content:center;cursor:pointer;color:var(--ink)}
+.icon-btn svg{width:20px;height:20px}
+.theme-btn{display:inline-flex;background:none;border:1px solid var(--line);border-radius:100px;width:38px;height:38px;
+  align-items:center;justify-content:center;cursor:pointer;color:var(--ink-2);transition:color .2s,border-color .2s}
+.theme-btn:hover{color:var(--ink);border-color:var(--sage)}
+.theme-btn svg{width:17px;height:17px}
+@media (max-width:960px){
+  .nav,.hdr .btn.hdr-cta{display:none}
+  .icon-btn{display:inline-flex}
+}
+/* mobile drawer */
+.drawer{position:fixed;inset:0;z-index:80;background:var(--paper);display:flex;flex-direction:column;
+  padding:1.2rem;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.drawer.open{opacity:1;visibility:visible}
+.drawer-top{display:flex;justify-content:flex-end}
+.drawer nav{display:flex;flex-direction:column;gap:.2rem;margin-top:2rem}
+.drawer nav a{font-family:var(--serif);font-size:1.9rem;text-decoration:none;padding:.5rem 0;border-bottom:1px solid var(--line-2)}
+.drawer .btn{margin-top:2rem;justify-content:center}
+
+/* ============ hero ============ */
+.hero{position:relative;min-height:min(86vh,780px);display:flex;align-items:flex-end;
+  padding:clamp(5rem,12vw,9rem) 0 clamp(2.5rem,5vw,4rem);overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:52% 42%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(18,26,21,.42) 0%,rgba(18,26,21,.12) 34%,rgba(18,26,21,.62) 78%,rgba(18,26,21,.86) 100%)}
+.hero .wrap{position:relative}
+.hero h1{color:#fff;max-width:16ch;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero .eyebrow{color:#f2e6c8;max-width:none}
+.hero p{color:rgba(255,255,255,.9);max-width:48ch;margin-top:1.4rem;font-size:clamp(1.02rem,1.5vw,1.18rem);
+  text-shadow:0 1px 16px rgba(0,0,0,.4)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:2.6rem;padding-top:1.6rem;
+  border-top:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:.82rem;letter-spacing:.03em}
+.hero-meta span{display:flex;align-items:center;gap:.5rem}
+.hero-meta svg{width:15px;height:15px;flex:none;color:#e8d3a0}
+@media (max-width:700px){
+  .hero{min-height:min(92vh,720px)}
+  .hero-img{object-position:64% 32%}
+  .hero::after{background:linear-gradient(180deg,rgba(18,26,21,.55) 0%,rgba(18,26,21,.35) 28%,rgba(18,26,21,.68) 72%,rgba(18,26,21,.9) 100%)}
+  .hero h1{max-width:none}
+}
+
+/* ============ marquee facts ============ */
+.facts{background:var(--paper-2);border-block:1px solid var(--line-2);padding:0}
+.facts-in{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2)}
+.fact{background:var(--paper-2);padding:1.9rem 1.4rem;text-align:center}
+.fact b{display:block;font-family:var(--serif);font-size:1.45rem;margin-bottom:.15rem}
+.fact span{font-size:.83rem;color:var(--ink-2)}
+@media (max-width:760px){.facts-in{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ offer cards ============ */
+.offers{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,2.2vw,1.8rem)}
+@media (max-width:980px){.offers{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.offers{grid-template-columns:1fr}}
+.offer{text-decoration:none;display:flex;flex-direction:column;gap:1.1rem;color:inherit}
+.offer .arch{position:relative;overflow:hidden;border-radius:180px 180px var(--r) var(--r);aspect-ratio:3/4;background:var(--paper-2)}
+.offer .arch img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.offer:hover .arch img{transform:scale(1.05)}
+.offer h3{font-size:1.28rem}
+.offer p{font-size:.93rem;color:var(--ink-2);margin:.5rem 0 0}
+.offer .more{margin-top:.7rem;font-size:.83rem;font-weight:600;color:var(--sage-deep);letter-spacing:.03em;
+  display:inline-flex;gap:.4rem;align-items:center}
+.offer:hover .more .arw{transform:translateX(3px)}
+.more .arw{transition:transform .25s}
+
+/* ============ timetable ============ */
+.tt{background:var(--paper-2)}
+.tt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:900px){.tt-grid{grid-template-columns:1fr}}
+.tt-day{background:var(--card);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:1.6rem;
+  box-shadow:var(--shadow);display:flex;flex-direction:column}
+.tt-day > h3{display:flex;align-items:baseline;gap:.6rem;padding-bottom:1.1rem;margin-bottom:.4rem;
+  border-bottom:1px solid var(--line-2)}
+.tt-day > h3 em{font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);margin-left:auto}
+.cls{padding:1.2rem 0;border-bottom:1px dashed var(--line-2)}
+.cls:last-child{border-bottom:0;padding-bottom:.2rem}
+.cls-time{font-family:var(--serif);font-size:1.32rem;display:flex;align-items:center;gap:.65rem}
+.tag{font-family:var(--sans);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  padding:.28rem .6rem;border-radius:100px;background:color-mix(in srgb,var(--sage) 16%,transparent);color:var(--sage-deep);
+  border:1px solid color-mix(in srgb,var(--sage) 30%,transparent)}
+.tag.gentle{background:color-mix(in srgb,var(--plum) 15%,transparent);color:var(--plum);
+  border-color:color-mix(in srgb,var(--plum) 32%,transparent)}
+.tag.season{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold);
+  border-color:color-mix(in srgb,var(--gold) 34%,transparent)}
+.cls-name{font-size:.95rem;font-weight:600;margin-top:.45rem}
+.cls-loc{font-size:.88rem;color:var(--ink-2);margin-top:.3rem;display:flex;gap:.45rem;align-items:flex-start}
+.cls-loc svg{width:14px;height:14px;flex:none;margin-top:.32rem;color:var(--ink-3)}
+.cls-loc a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.cls-loc a:hover{color:var(--sage);border-color:var(--sage)}
+.eir{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+.tt-note{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+  background:var(--card);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:1.5rem 1.8rem;box-shadow:var(--shadow)}
+.tt-note p{margin:0;color:var(--ink-2);font-size:.95rem;max-width:56ch}
+.tt-note strong{color:var(--ink)}
+
+/* ============ retreat band ============ */
+.retreat{background:var(--forest);color:var(--on-forest);overflow:hidden}
+.retreat .eyebrow{color:var(--gold)}
+.retreat h2{color:#fff}
+.retreat .lede{color:var(--on-forest-2)}
+.retreat-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+@media (max-width:900px){.retreat-grid{grid-template-columns:1fr}}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:6px;top:10px;bottom:10px;width:1px;
+  background:linear-gradient(180deg,transparent,rgba(236,231,220,.35),transparent)}
+.timeline li{position:relative;padding:0 0 1.35rem 2.1rem}
+.timeline li::before{content:"";position:absolute;left:0;top:.55rem;width:13px;height:13px;border-radius:50%;
+  background:var(--forest);border:1.5px solid rgba(236,231,220,.5)}
+.timeline li:nth-child(3)::before,.timeline li:nth-child(6)::before{background:var(--gold);border-color:var(--gold)}
+.timeline time{display:block;font-family:var(--sans);font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:.2rem}
+.timeline b{font-family:var(--serif);font-weight:400;font-size:1.16rem;display:block}
+.timeline span{font-size:.89rem;color:var(--on-forest-2)}
+.price-card{background:rgba(236,231,220,.06);border:1px solid rgba(236,231,220,.16);border-radius:var(--r-lg);
+  padding:clamp(1.6rem,3vw,2.2rem);backdrop-filter:blur(6px);position:sticky;top:100px}
+.price-card .pc-img{border-radius:var(--r);overflow:hidden;margin:-.4rem 0 1.5rem;aspect-ratio:16/9}
+.price-card .pc-img img{width:100%;height:100%;object-fit:cover}
+.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.85rem 0;
+  border-bottom:1px solid rgba(236,231,220,.12)}
+.price-row:last-of-type{border-bottom:0}
+.price-row b{font-family:var(--serif);font-size:1.9rem;font-weight:400}
+.price-row .lbl{font-size:.85rem;color:var(--on-forest-2)}
+.price-row.early b{color:var(--gold)}
+.pc-note{font-size:.82rem;color:var(--on-forest-2);margin:1.1rem 0 1.5rem;line-height:1.6}
+.price-card .btn{width:100%;justify-content:center}
+.badge{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;color:var(--forest);background:var(--gold);padding:.32rem .7rem;border-radius:100px;margin-bottom:1rem}
+
+/* ============ about ============ */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+.portrait{position:relative}
+.portrait img{border-radius:220px 220px var(--r-lg) var(--r-lg);width:100%;aspect-ratio:3/4;object-fit:cover;
+  box-shadow:var(--shadow-lg)}
+.portrait::after{content:"";position:absolute;inset:26px -20px -20px 26px;border-radius:220px 220px var(--r-lg) var(--r-lg);
+  border:1px solid var(--sage);opacity:.4;z-index:-1;pointer-events:none}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.8rem 0}
+.chip{font-size:.78rem;padding:.42rem .85rem;border-radius:100px;border:1px solid var(--line);color:var(--ink-2);
+  background:var(--card)}
+.pull{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.45;color:var(--ink);
+  border-left:2px solid var(--sage);padding-left:1.4rem;margin:2rem 0}
+
+/* ============ testimonials ============ */
+.quotes{background:var(--paper-2)}
+.q-rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(88vw,400px);gap:1.2rem;overflow-x:auto;
+  scroll-snap-type:x mandatory;padding:.5rem .2rem 1.6rem;margin:0 -.2rem;scrollbar-width:thin}
+.q-rail::-webkit-scrollbar{height:6px}
+.q-rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:100px}
+.q-card{scroll-snap-align:start;background:var(--card);border:1px solid var(--line-2);border-radius:var(--r-lg);
+  padding:1.9rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.q-card .mark{font-family:var(--serif);font-size:3rem;line-height:.6;color:var(--sage);opacity:.5;margin-bottom:.8rem}
+.q-card p{font-size:.97rem;color:var(--ink-2);margin:0 0 1.3rem}
+.q-card cite{margin-top:auto;font-style:normal;font-weight:600;font-size:.9rem}
+.q-card cite span{display:block;font-weight:400;font-size:.8rem;color:var(--ink-3);margin-top:.15rem}
+.q-nav{display:flex;gap:.5rem;margin-top:.4rem}
+.q-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);
+  cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.q-nav button:hover{border-color:var(--sage);color:var(--sage)}
+.q-nav svg{width:16px;height:16px}
+
+/* ============ gifts ============ */
+.gifts{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2.5vw,2rem)}
+@media (max-width:820px){.gifts{grid-template-columns:1fr}}
+.gift{background:var(--card);border:1px solid var(--line-2);border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column}
+.gift-img{aspect-ratio:16/10;overflow:hidden;background:var(--paper-2)}
+.gift-img.contain{display:grid;place-items:center;background:#fff;padding:1.4rem}
+.gift-img.contain img{object-fit:contain;height:auto;max-height:100%}
+.gift-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.gift:hover .gift-img img{transform:scale(1.04)}
+.gift-body{padding:clamp(1.5rem,3vw,2.1rem);display:flex;flex-direction:column;flex:1}
+.gift-body p{color:var(--ink-2);font-size:.95rem}
+.gift-price{font-family:var(--serif);font-size:1.6rem;margin:.2rem 0 1.3rem}
+.gift .btn{align-self:flex-start;margin-top:auto}
+
+/* ============ contact ============ */
+.contact{background:var(--forest);color:var(--on-forest)}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--gold)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem)}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.c-list{list-style:none;margin:2rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.2rem}
+.c-list li{display:flex;gap:.9rem;align-items:flex-start}
+.c-list svg{width:19px;height:19px;flex:none;margin-top:.25rem;color:var(--gold)}
+.c-list b{display:block;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--on-forest-2);
+  font-weight:600;margin-bottom:.15rem}
+.c-list a{color:var(--on-forest);text-decoration:none;font-size:1.06rem;border-bottom:1px solid rgba(236,231,220,.25)}
+.c-list a:hover{border-color:var(--gold);color:var(--gold)}
+form{background:rgba(236,231,220,.06);border:1px solid rgba(236,231,220,.16);border-radius:var(--r-lg);
+  padding:clamp(1.5rem,3vw,2.2rem)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:560px){.f-row{grid-template-columns:1fr}}
+label{display:block;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-forest-2);
+  margin:0 0 .45rem;font-weight:600}
+.field{margin-bottom:1.1rem}
+input,textarea,select{width:100%;background:rgba(0,0,0,.18);border:1px solid rgba(236,231,220,.2);border-radius:10px;
+  padding:.85rem 1rem;color:var(--on-forest);font:inherit;font-size:.95rem;transition:border-color .2s,background .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold);background:rgba(0,0,0,.3)}
+textarea{min-height:120px;resize:vertical}
+form .btn{width:100%;justify-content:center;margin-top:.4rem}
+.f-note{font-size:.78rem;color:var(--on-forest-2);text-align:center;margin:.9rem 0 0}
+
+/* ============ footer ============ */
+footer{background:var(--paper-2);border-top:1px solid var(--line-2);padding:clamp(3rem,6vw,4.5rem) 0 2rem}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--line-2)}
+@media (max-width:760px){.f-top{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
+.f-brand p{font-size:.92rem;color:var(--ink-2);max-width:34ch;margin-top:1rem}
+footer h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:700;
+  color:var(--ink-3);margin:0 0 1rem}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.6rem}
+footer ul a{text-decoration:none;font-size:.93rem;color:var(--ink-2)}
+footer ul a:hover{color:var(--sage)}
+.f-bot{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;padding-top:1.8rem;
+  font-size:.8rem;color:var(--ink-3)}
+.f-bot a{color:var(--ink-3)}
+
+/* ============ reveal ============ */
+.js .reveal{opacity:0;transform:translateY(26px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none}
+  .btn:hover{transform:none}
+  .offer .arch img,.gift-img img{transition:none}
+}
+
+/* ============ design notes panel ============ */
+.notes-btn{position:fixed;right:1.1rem;bottom:1.1rem;z-index:70;display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--forest);color:var(--on-forest);border:0;border-radius:100px;padding:.75rem 1.15rem;font:inherit;
+  font-size:.83rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-lg)}
+.notes-btn svg{width:15px;height:15px}
+.notes{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);z-index:90;background:var(--paper);
+  border-left:1px solid var(--line);box-shadow:var(--shadow-lg);padding:1.6rem;overflow-y:auto;
+  transform:translateX(102%);transition:transform .4s cubic-bezier(.2,.7,.3,1)}
+.notes.open{transform:none}
+.notes h3{margin-bottom:.3rem}
+.notes .close{position:absolute;top:1.1rem;right:1.1rem;background:none;border:0;cursor:pointer;color:var(--ink-2);font-size:1.4rem;line-height:1}
+.notes ol{padding-left:1.1rem;margin:1.4rem 0 0;display:flex;flex-direction:column;gap:1.1rem}
+.notes li{font-size:.9rem;color:var(--ink-2)}
+.notes li b{color:var(--ink);display:block;font-family:var(--serif);font-size:1.02rem;font-weight:400;margin-bottom:.15rem}
+@media print{.notes-btn,.notes,.concept{display:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+</defs></svg>
+
+<div class="concept">A <b>design concept</b> for yogamountain.ie — an independent redesign proposal, not the live site.</div>
+
+<header class="hdr" id="hdr"><div class="wrap hdr-in">
+  <a class="brand" href="#top" aria-label="Yoga Mountain home">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="15" r="10" fill="#e8b83c"/>
+      <path d="M32 34h36a18 18 0 0 1-36 0Z" fill="#6f5b7e"/>
+      <path d="M24 52h52a26 26 0 0 1-52 0Z" fill="#7fb0aa"/>
+      <path d="M14 72h72a36 36 0 0 1-72 0Z" fill="#63896f"/>
+    </svg>
+    <span class="brand-txt">Yoga<span>Mountain</span></span>
+  </a>
+  <nav class="nav">
+    <a href="#classes">Classes</a>
+    <a href="#timetable">Timetable</a>
+    <a href="#retreat">Retreats</a>
+    <a href="#about">About Hannah</a>
+    <a href="#words">Testimonials</a>
+    <a href="#gifts">Gift vouchers</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" aria-label="Switch colour theme"><svg><use href="#i-sun"/></svg></button>
+  <a class="btn btn-primary hdr-cta" href="#contact">Book a class</a>
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+</div></header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="drawer-top"><button class="icon-btn" id="closeBtn" aria-label="Close menu" style="display:inline-flex"><svg><use href="#i-x"/></svg></button></div>
+  <nav>
+    <a href="#classes">Classes</a><a href="#timetable">Timetable</a><a href="#retreat">Retreats</a>
+    <a href="#about">About Hannah</a><a href="#words">Testimonials</a><a href="#gifts">Gift vouchers</a>
+  </nav>
+  <a class="btn btn-primary" href="#contact">Book a class</a>
+</div>
+
+<main id="top">
+<section class="hero">
+  <img class="hero-img" src="assets/hero-sunrise-practice.jpg" width="1024" height="683" fetchpriority="high" decoding="async" alt="A woman practising yoga at sunrise on a hilltop, arms raised overhead against the Wicklow mountains">
+  <div class="wrap">
+    <p class="eyebrow">Enniskerry · Shankill · Bray — Co. Wicklow</p>
+    <h1>Come back to your breath.</h1>
+    <p>Hatha flow, breathwork and long, unhurried relaxation with Hannah Dunford. Small classes for every body — beginners genuinely welcome.</p>
+    <div class="hero-cta">
+      <a class="btn btn-light" href="#timetable">See the weekly timetable <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-outline-light" href="#retreat">Autumn Equinox retreat</a>
+    </div>
+    <div class="hero-meta">
+      <span><svg><use href="#i-leaf"/></svg> Teaching since 2019</span>
+      <span><svg><use href="#i-leaf"/></svg> Recognised by CTHA &amp; Yoga Therapy Ireland</span>
+      <span><svg><use href="#i-leaf"/></svg> Mats &amp; props provided</span>
+    </div>
+  </div>
+</section>
+
+<section class="facts" style="padding:0">
+  <div class="wrap"><div class="facts-in">
+    <div class="fact"><b>4</b><span>classes each week</span></div>
+    <div class="fact"><b>All levels</b><span>gentle &amp; beginner options</span></div>
+    <div class="fact"><b>1:1</b><span>private tuition at home</span></div>
+    <div class="fact"><b>Seasonal</b><span>day retreats &amp; workshops</span></div>
+  </div></div>
+</section>
+
+<section id="classes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What's on offer</p>
+      <h2>Four ways to practise with Hannah</h2>
+      <p class="lede">Every session weaves together pranayama, hatha flow, mindfulness and meditation — often finishing with temple massage and essential oils in savasana.</p>
+    </div>
+    <div class="offers">
+      <a class="offer reveal" href="#timetable">
+        <div class="arch"><img src="assets/outdoor-class-bray.jpg" alt="A group class practising outdoors on the grass by Bray seafront" loading="lazy"></div>
+        <div><h3>Weekly group classes</h3><p>All-levels and gentle hatha in Enniskerry, Shankill and Bray. Term-time, small groups, no rush.</p>
+        <span class="more">See the timetable <svg class="arw" width="14" height="14"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="offer reveal" href="#contact">
+        <div class="arch"><img src="assets/garden-buddha.jpg" alt="A weathered stone Buddha in a quiet garden" loading="lazy"></div>
+        <div><h3>Private one-to-one</h3><p>A sequence built around your body, ability and lifestyle — ideal with an injury or health condition. Equipment provided.</p>
+        <span class="more">Enquire about 1:1 <svg class="arw" width="14" height="14"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="offer reveal" href="#contact">
+        <div class="arch"><img src="assets/forest-path.jpg" alt="Sunlight falling across a woodland path" loading="lazy"></div>
+        <div><h3>Kids &amp; teen yoga</h3><p>Philosophy, breathing for anxiety, balances and inversions — tools for growing up well. Schools and groups welcome.</p>
+        <span class="more">Book a workshop <svg class="arw" width="14" height="14"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="offer reveal" href="#retreat">
+        <div class="arch"><img src="assets/garden-firepit.jpg" alt="A garden fire bowl set in a circle of stones" loading="lazy"></div>
+        <div><h3>Workshops &amp; retreats</h3><p>Yoga history and philosophy, seasonal rituals for Imbolc, Solstice and the Equinox, and full-day retreats in nature.</p>
+        <span class="more">See what's coming up <svg class="arw" width="14" height="14"><use href="#i-arrow"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tt" id="timetable">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Weekly timetable</p>
+      <h2>Find a class near you</h2>
+      <p class="lede">Three venues across north Wicklow and south Dublin. Drop Hannah a message to check availability before your first class.</p>
+    </div>
+    <div class="tt-grid">
+      <div class="tt-day reveal">
+        <h3>Tuesday <em>Two classes</em></h3>
+        <div class="cls">
+          <div class="cls-time">10.00 – 11.00 <span class="tag">All levels</span></div>
+          <div class="cls-name">Hatha Yoga</div>
+          <div class="cls-loc"><svg><use href="#i-pin"/></svg><span>Sage and Sky Studio, Enniskerry<br><span class="eir">A98 P2K27</span></span></div>
+        </div>
+        <div class="cls">
+          <div class="cls-time">19.30 – 20.45 <span class="tag">All levels</span></div>
+          <div class="cls-name">Hatha Yoga · extended class</div>
+          <div class="cls-loc"><svg><use href="#i-pin"/></svg><span>Rathmichael School Hall, Shankill<br><span class="eir">D18 ET38</span></span></div>
+        </div>
+        <div class="cls">
+          <div class="cls-time">19.00 – 20.00 <span class="tag season">July &amp; August</span></div>
+          <div class="cls-name">Outdoor Yoga, Shankill</div>
+          <div class="cls-loc"><svg><use href="#i-pin"/></svg><span>Summer evenings on the grass, weather permitting</span></div>
+        </div>
+      </div>
+      <div class="tt-day reveal">
+        <h3>Wednesday <em>One class</em></h3>
+        <div class="cls">
+          <div class="cls-time">10.00 – 11.00 <span class="tag gentle">Gentle · beginners</span></div>
+          <div class="cls-name">Hatha Yoga</div>
+          <div class="cls-loc"><svg><use href="#i-pin"/></svg><span>Rise Up Dance &amp; Yoga Studio at Shoreline Gym, Bray<br><span class="eir">A98 F585</span></span></div>
+        </div>
+        <div class="cls">
+          <div class="cls-time" style="font-size:1.05rem;color:var(--ink-2)">New to yoga?</div>
+          <div class="cls-loc" style="margin-top:.5rem"><span>This is the gentlest place to start — slower pacing, more time in each shape, and nothing you can get wrong.</span></div>
+        </div>
+      </div>
+      <div class="tt-day reveal">
+        <h3>Thursday <em>One class</em></h3>
+        <div class="cls">
+          <div class="cls-time">10.00 – 11.00 <span class="tag">All levels</span></div>
+          <div class="cls-name">Hatha Yoga</div>
+          <div class="cls-loc"><svg><use href="#i-pin"/></svg><span>Sage and Sky Studio, Enniskerry<br><span class="eir">A98 P2K27</span></span></div>
+        </div>
+        <div class="cls">
+          <div class="cls-time" style="font-size:1.05rem;color:var(--ink-2)">What to bring</div>
+          <div class="cls-loc" style="margin-top:.5rem"><span>Just yourself and something warm for savasana. Mats, blocks, straps, bolsters and blankets are all here.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tt-note reveal">
+      <p><strong>Not sure which class suits you?</strong> Text or email Hannah with a little about your experience and anything you're working around — she'll point you to the right room.</p>
+      <a class="btn btn-primary" href="#contact">Ask about a class <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="retreat" id="retreat">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:70ch">
+      <p class="eyebrow">Next retreat · Sunday 27 September</p>
+      <h2>Restore — an Autumn Equinox day retreat</h2>
+      <p class="lede">A full day set aside for yourself: yoga, breathwork, alpacas, a forest walk and deep rest at Powerscourt Springs Health Farm, Enniskerry. 10.30am – 4.30pm.</p>
+    </div>
+    <div class="retreat-grid">
+      <div class="reveal">
+        <ol class="timeline">
+          <li><time>10.30 – 11.00</time><b>Arrival &amp; welcome</b><span>Refreshments and time to settle in</span></li>
+          <li><time>11.00 – 11.30</time><b>Alpaca experience</b><span>Meet and feed the alpacas</span></li>
+          <li><time>11.45 – 13.00</time><b>Hatha yoga for all levels</b><span>A grounding practice with breathwork, mindful movement and a long savasana</span></li>
+          <li><time>13.00 – 14.00</time><b>Seasonal lunch</b><span>A delicious seasonal lunch and time to relax and connect</span></li>
+          <li><time>14.00 – 15.00</time><b>Forest walk &amp; nature connection</b><span>A guided walk with flora and fauna insights along the way</span></li>
+          <li><time>15.00 – 15.45</time><b>Deep rest meditation</b><span>Soothing sound with optional gentle body releases</span></li>
+          <li><time>16.00 – 16.30</time><b>Fire-pit gathering &amp; closing circle</b><span>A seasonal ritual of reflection and release, marking the turn into autumn</span></li>
+        </ol>
+        <p style="color:var(--on-forest-2);font-size:.85rem;margin-top:.5rem">Itinerary subject to change.</p>
+      </div>
+      <aside class="price-card reveal">
+        <div class="pc-img"><img src="assets/autumn-leaves.jpg" alt="Autumn leaves, pine cones and berries gathered on the ground" loading="lazy"></div>
+        <span class="badge"><svg width="12" height="12"><use href="#i-cal"/></svg> Early bird until 31 August</span>
+        <div class="price-row early"><span class="lbl">Early bird<br>per person</span><b>€165</b></div>
+        <div class="price-row"><span class="lbl">Full price<br>per person</span><b>€179</b></div>
+        <p class="pc-note">A €75 deposit secures your place, with the balance due by 4 September. Spaces are limited — please contact Hannah for a booking form before payment.</p>
+        <a class="btn btn-light" href="#contact">Request a booking form <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="portrait reveal"><img src="assets/hannah-dunford.jpg" alt="Hannah Dunford sitting on a rock on a heather-covered Wicklow hillside" loading="lazy"></div>
+      <div class="reveal">
+        <p class="eyebrow">Your teacher</p>
+        <h2>Hannah Dunford</h2>
+        <p class="lede">Yoga Mountain was founded in Wicklow in 2019 with one simple aim — to help everybody, at any age or stage, feel confident and at home in their own practice.</p>
+        <p>Hannah's teaching brings together pranayama, hatha flow, mindfulness and meditation, with a background in choral singing that surfaces as gentle mantra chanting. Trained as a Nutrition Specialist and in reflexology, massage, anatomy and physiology, she often folds therapeutic touch — temple massage with essential oils, neck and shoulder release — into a long savasana.</p>
+        <blockquote class="pull">“My goal is constant and clear: that every student feels confident and empowered on their own journey toward a healthier, well-balanced life.”</blockquote>
+        <p>Before yoga, Hannah spent more than a decade in the Irish music industry as a record label manager and tour manager, and years working with children — which is exactly why her kids' and teen classes land so well.</p>
+        <div class="chips">
+          <span class="chip">Nutrition Specialist</span><span class="chip">Reflexology</span><span class="chip">Swedish Massage</span>
+          <span class="chip">Anatomy &amp; Physiology</span><span class="chip">Psychology</span><span class="chip">Sports &amp; Fitness</span>
+          <span class="chip">CTHA recognised</span><span class="chip">Yoga Therapy Ireland</span>
+        </div>
+        <a class="btn btn-ghost" href="#contact">Get in touch <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" id="words">
+  <div class="wrap">
+    <div class="section-head reveal" style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;justify-content:space-between;max-width:none">
+      <div style="max-width:56ch">
+        <p class="eyebrow">In their words</p>
+        <h2>What students say</h2>
+      </div>
+      <div class="q-nav"><button id="qPrev" aria-label="Previous quotes"><svg><use href="#i-left"/></svg></button><button id="qNext" aria-label="More quotes"><svg><use href="#i-arrow"/></svg></button></div>
+    </div>
+    <div class="q-rail" id="qRail" tabindex="0" aria-label="Student testimonials, scrollable">
+      <figure class="q-card reveal"><div class="mark">“</div>
+        <p>I have been receiving yoga guidance from Hannah for a year now and can honestly state she is a patient and skilled teacher with an instinct for what is achievable. I am 68 years old with a lot of physical legacy issues as a result of sports injury. Yoga has become part of my regimen to maintain mobility.</p>
+        <cite>Murph<span>Weekly classes</span></cite></figure>
+      <figure class="q-card reveal"><div class="mark">“</div>
+        <p>Myself and my cousin recently went on a Yoga Mountain mini-retreat and from beginning to end it was a truly special day. Hannah brought us through a lovely yoga session at a perfectly pitched pace, I felt wonderfully stretched and revitalised by the end… a really impressive and well-planned retreat.</p>
+        <cite>Jenny<span>Sugarloaf mini-retreat</span></cite></figure>
+      <figure class="q-card reveal"><div class="mark">“</div>
+        <p>I recently attended a 2-hour philosophy yoga workshop with Hannah. We learned about the 8 limbs of yoga, which included a movement sequence… a truly insightful session in a relaxed environment, with a beautiful view of Carrickgollogan hill in the distance.</p>
+        <cite>Ann<span>Philosophy workshop</span></cite></figure>
+      <figure class="q-card reveal"><div class="mark">“</div>
+        <p>I treated myself to an at-home yoga and relaxation session to help my recovery from a serious illness. Hannah was very helpful and understanding. I enjoyed the session very much and her encouragement has helped me get back into practice again. I highly recommend Hannah.</p>
+        <cite>Grace<span>Private one-to-one</span></cite></figure>
+      <figure class="q-card reveal"><div class="mark">“</div>
+        <p>Hannah's passion for nature and yoga was apparent throughout the whole retreat — a hike around Bray Head, a swim, a healthy snack, yoga on the seafront and a sauna to finish. I am already looking forward to the next one!</p>
+        <cite>Irena<span>Bray Head mini-retreat</span></cite></figure>
+      <figure class="q-card reveal"><div class="mark">“</div>
+        <p>She taught us about the different branches on the tree of life… we did twists, turns, bending and stretches, and breathing exercises to help with calming down and anxiety. My favourite part came when we all got fluffy blankets and relaxed. 10/10 recommend!</p>
+        <cite>TY student, Sion Hill<span>Teen yoga workshop</span></cite></figure>
+    </div>
+  </div>
+</section>
+
+<section id="gifts">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Gift vouchers &amp; gifts</p>
+      <h2>Give someone an hour to themselves</h2>
+      <p class="lede">Perfect for birthdays, Christmas, or just because. Hannah will help you pick the right option — a set of public classes, or a private session tailored to them.</p>
+    </div>
+    <div class="gifts">
+      <article class="gift reveal">
+        <div class="gift-img contain"><img src="assets/gift-voucher.jpg" alt="A Yoga Mountain gift voucher card" loading="lazy"></div>
+        <div class="gift-body">
+          <h3>Yoga gift voucher</h3>
+          <p>Redeemable against weekly classes, a private one-to-one, or a place on a seasonal retreat. Written by hand and posted or emailed.</p>
+          <div class="gift-price">Any amount</div>
+          <a class="btn btn-primary" href="#contact">Buy a voucher <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="gift reveal">
+        <div class="gift-img"><img src="assets/lavender-eye-pillow.jpg" alt="A hand-embroidered lavender eye pillow in charcoal cotton" loading="lazy"></div>
+        <div class="gift-body">
+          <h3>Hand-embroidered lavender eye pillow</h3>
+          <p>Filled with fragrant lavender to calm the mind and deepen relaxation — for savasana, meditation, or simply unwinding. Removable, washable cotton cover.</p>
+          <div class="gift-price">€25</div>
+          <a class="btn btn-ghost" href="#contact">Order one <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Enquiries</p>
+        <h2>Say hello</h2>
+        <p class="lede" style="margin-top:1rem">Questions about a class, a retreat place, a gift voucher or a private session — a quick text or email is the fastest way to reach Hannah.</p>
+        <ul class="c-list">
+          <li><svg><use href="#i-phone"/></svg><div><b>Call or text</b><a href="tel:+353872822231">087 282 2231</a></div></li>
+          <li><svg><use href="#i-mail"/></svg><div><b>Email</b><a href="mailto:hannahdunford76@gmail.com">hannahdunford76@gmail.com</a></div></li>
+          <li><svg><use href="#i-fb"/></svg><div><b>Facebook</b><a href="https://www.facebook.com/Yoga_Mountain-106796767429685/" target="_blank" rel="noopener">Yoga Mountain</a></div></li>
+          <li><svg><use href="#i-pin"/></svg><div><b>Where</b><span style="font-size:1.02rem">Enniskerry, Shankill &amp; Bray — Co. Wicklow</span></div></li>
+        </ul>
+      </div>
+      <form class="reveal" id="enquiry" novalidate>
+        <div class="f-row">
+          <div class="field"><label for="n">Your name</label><input id="n" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="e">Your email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label for="s">I'm enquiring about</label>
+          <select id="s" name="subject">
+            <option>A weekly class</option><option>Private one-to-one tuition</option>
+            <option>The Autumn Equinox retreat</option><option>Kids &amp; teen yoga</option>
+            <option>A gift voucher or eye pillow</option><option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="m">Message</label><textarea id="m" name="message" placeholder="A little about your experience, and anything you're working around…"></textarea></div>
+        <button class="btn btn-light" type="submit">Send enquiry <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></button>
+        <p class="f-note" id="formNote">Demo form — this is a design concept, nothing is sent.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <a class="brand" href="#top" aria-label="Yoga Mountain home">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="15" r="10" fill="#e8b83c"/>
+            <path d="M32 34h36a18 18 0 0 1-36 0Z" fill="#6f5b7e"/>
+            <path d="M24 52h52a26 26 0 0 1-52 0Z" fill="#7fb0aa"/>
+            <path d="M14 72h72a36 36 0 0 1-72 0Z" fill="#63896f"/>
+          </svg>
+          <span class="brand-txt">Yoga<span>Mountain</span></span>
+        </a>
+        <p>A passion to inspire everybody to practise and enjoy the benefits of yoga. Based in Co. Wicklow, Ireland.</p>
+      </div>
+      <div><h4>Practise</h4><ul>
+        <li><a href="#timetable">Weekly timetable</a></li><li><a href="#classes">Private tuition</a></li>
+        <li><a href="#classes">Kids &amp; teen yoga</a></li><li><a href="#retreat">Retreats &amp; workshops</a></li>
+      </ul></div>
+      <div><h4>More</h4><ul>
+        <li><a href="#about">About Hannah</a></li><li><a href="#words">Testimonials</a></li>
+        <li><a href="#gifts">Gift vouchers</a></li><li><a href="#contact">Enquiries</a></li>
+        <li><a href="#disclaimer">Medical disclaimer</a></li>
+      </ul></div>
+    </div>
+    <p id="disclaimer" style="font-size:.8rem;color:var(--ink-3);max-width:80ch;margin:1.8rem 0 0">
+      <strong style="color:var(--ink-2)">Medical disclaimer:</strong> yoga is not a substitute for medical advice. Please tell Hannah about any injury, illness or pregnancy before class, and check with your doctor if you are unsure whether a class is right for you.</p>
+    <div class="f-bot">
+      <span>© 2026 Yoga Mountain · Co. Wicklow, Ireland</span>
+      <span>Photography by <a href="https://www.thevisiblebusiness.ie" target="_blank" rel="noopener">The Visible Business</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="notes-btn" id="notesBtn"><svg><use href="#i-leaf"/></svg> Design notes</button>
+<aside class="notes" id="notes" aria-label="Design notes">
+  <button class="close" id="notesClose" aria-label="Close design notes">×</button>
+  <p class="eyebrow" style="margin-bottom:.4rem">Concept rationale</p>
+  <h3>What changed, and why</h3>
+  <ol>
+    <li><b>A real first screen</b>Instead of a page titled “Home” with a poster image, the hero says where you are, what's on and what to do next — in words, not baked into a JPEG.</li>
+    <li><b>Text that Google can read</b>Class times, retreat dates, prices and calls to action are live HTML, not text inside images. Searches for “yoga Enniskerry” can now find them.</li>
+    <li><b>The timetable as a product</b>Days, times, levels and eircodes in a scannable grid — the single thing most visitors came for.</li>
+    <li><b>One retreat, sold properly</b>Itinerary, price ladder and deposit terms in a sticky card, with the early-bird deadline visible.</li>
+    <li><b>Warm, natural palette</b>Sage, forest, oat paper and a saffron accent drawn straight from the existing logo — no linen wallpaper, no boxed 2012 theme frame.</li>
+    <li><b>Type with a voice</b>A serif for headlines and a clean sans for reading, at a comfortable size and line length.</li>
+    <li><b>Built mobile-first</b>Fluid type, a real menu drawer, pinch-zoom no longer disabled, and dark-mode support.</li>
+    <li><b>Accessibility &amp; performance</b>Proper heading order, described images, visible focus rings, reduced-motion support, and photos sized for the web.</li>
+  </ol>
+  <p style="font-size:.82rem;color:var(--ink-3);margin-top:1.6rem">All copy, photography and class details are the site's own, rearranged. Photography by The Visible Business.</p>
+</aside>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var hdr=document.getElementById('hdr');
+  var onScroll=function(){ hdr.classList.toggle('solid', window.scrollY>12); };
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+
+  var drawer=document.getElementById('drawer'), menuBtn=document.getElementById('menuBtn');
+  var setDrawer=function(open){ drawer.classList.toggle('open',open); menuBtn.setAttribute('aria-expanded',open);
+    document.body.style.overflow=open?'hidden':''; };
+  menuBtn.addEventListener('click',function(){setDrawer(true)});
+  document.getElementById('closeBtn').addEventListener('click',function(){setDrawer(false)});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setDrawer(false)})});
+  addEventListener('keydown',function(e){ if(e.key==='Escape'){setDrawer(false);setNotes(false);} });
+
+  var root=document.documentElement, tb=document.getElementById('themeBtn');
+  tb.addEventListener('click',function(){
+    var dark=matchMedia('(prefers-color-scheme:dark)').matches;
+    var cur=root.getAttribute('data-theme')||(dark?'dark':'light');
+    root.setAttribute('data-theme',cur==='dark'?'light':'dark');
+  });
+
+  var rail=document.getElementById('qRail');
+  var step=function(){ return Math.min(rail.clientWidth*0.9, 420); };
+  document.getElementById('qNext').addEventListener('click',function(){rail.scrollBy({left:step(),behavior:'smooth'})});
+  document.getElementById('qPrev').addEventListener('click',function(){rail.scrollBy({left:-step(),behavior:'smooth'})});
+
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  var show=function(el,i){ if(el.classList.contains('in'))return;
+    el.style.transitionDelay=(Math.min(i||0,4)*70)+'ms'; el.classList.add('in'); };
+  var sweep=function(){ var vh=innerHeight||document.documentElement.clientHeight;
+    els.forEach(function(el,i){ if(el.getBoundingClientRect().top < vh*0.92) show(el,i); }); };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en,i){ if(en.isIntersecting){ show(en.target,i); io.unobserve(en.target); } });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  }
+  /* belt and braces: some embedded browser panes never fire IntersectionObserver */
+  sweep(); addEventListener('scroll',sweep,{passive:true}); addEventListener('resize',sweep);
+  setTimeout(function(){ els.forEach(function(el,i){ show(el,i); }); },2600);
+
+  var notes=document.getElementById('notes');
+  var setNotes=function(open){ notes.classList.toggle('open',open); };
+  document.getElementById('notesBtn').addEventListener('click',function(){setNotes(!notes.classList.contains('open'))});
+  document.getElementById('notesClose').addEventListener('click',function(){setNotes(false)});
+
+  document.getElementById('enquiry').addEventListener('submit',function(e){
+    e.preventDefault();
+    var note=document.getElementById('formNote');
+    note.textContent='This is a design concept — in the live build this would email Hannah and confirm on screen.';
+    note.style.color='var(--gold)';
+  });
+})();
+</script>
+
+</body>
+</html>
