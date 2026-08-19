@@ -2,7 +2,6 @@
 <html lang="en-IE">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="%23fbf8f2"/><circle cx="50" cy="20" r="9" fill="%23e8b83c"/><path d="M34 37h32a16 16 0 0 1-32 0Z" fill="%236f5b7e"/><path d="M27 54h46a23 23 0 0 1-46 0Z" fill="%237fb0aa"/><path d="M18 72h64a32 32 0 0 1-64 0Z" fill="%2363896f"/></svg>'>
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Yoga Mountain — hatha yoga, breathwork and deep relaxation with Hannah Dunford in Enniskerry, Shankill and Bray, Co. Wicklow. Weekly classes, private tuition, kids and teen yoga, and seasonal day retreats.">
@@ -46,6 +45,16 @@
   --shadow-lg:0 2px 4px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,.9);
 }
 
+/* logo swaps with the theme */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .brand .logo-light{display:none}
+  :root:not([data-theme="light"]) .brand .logo-dark{display:block}
+}
+:root[data-theme="dark"] .brand .logo-light{display:none}
+:root[data-theme="dark"] .brand .logo-dark{display:block}
+:root[data-theme="light"] .brand .logo-light{display:block}
+:root[data-theme="light"] .brand .logo-dark{display:none}
+
 /* ============ base ============ */
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -82,21 +91,16 @@ section{padding:clamp(4.5rem,9vw,8rem) 0;position:relative}
 .btn .arw{transition:transform .25s}
 .btn:hover .arw{transform:translateX(3px)}
 
-/* ============ concept strip ============ */
-.concept{background:var(--forest);color:var(--on-forest-2);font-size:.76rem;letter-spacing:.04em;
-  padding:.55rem 1.2rem;text-align:center}
-.concept b{color:var(--on-forest);font-weight:600}
-
 /* ============ header ============ */
 .hdr{position:sticky;top:0;z-index:60;transition:background .3s,box-shadow .3s,backdrop-filter .3s;
   border-bottom:1px solid transparent}
 .hdr.solid{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px) saturate(1.4);
   -webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom-color:var(--line-2);box-shadow:0 1px 24px -12px rgba(0,0,0,.3)}
 .hdr-in{display:flex;align-items:center;gap:1.4rem;padding:.85rem 0;min-height:68px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-right:auto}
-.brand svg{width:34px;height:34px;flex:none}
-.brand-txt{font-family:var(--serif);line-height:1;letter-spacing:.11em;text-transform:uppercase;font-size:.86rem}
-.brand-txt span{display:block;color:var(--ink-2);font-size:.72rem;letter-spacing:.19em;margin-top:.22rem}
+.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto}
+.brand img{display:none;height:52px;width:auto}
+.brand .logo-light{display:block}
+@media (max-width:520px){.brand img{height:42px}}
 .nav{display:flex;align-items:center;gap:.35rem}
 .nav a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--ink-2);padding:.5rem .78rem;border-radius:100px;
   transition:color .2s,background .2s}
@@ -310,7 +314,8 @@ form .btn{width:100%;justify-content:center;margin-top:.4rem}
 footer{background:var(--paper-2);border-top:1px solid var(--line-2);padding:clamp(3rem,6vw,4.5rem) 0 2rem}
 .f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--line-2)}
 @media (max-width:760px){.f-top{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
-.f-brand p{font-size:.92rem;color:var(--ink-2);max-width:34ch;margin-top:1rem}
+.f-brand .brand img{height:64px}
+.f-brand p{font-size:.92rem;color:var(--ink-2);max-width:34ch;margin-top:1.2rem}
 footer h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:700;
   color:var(--ink-3);margin:0 0 1rem}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.6rem}
@@ -329,21 +334,6 @@ footer ul a:hover{color:var(--sage)}
   .offer .arch img,.gift-img img{transition:none}
 }
 
-/* ============ design notes panel ============ */
-.notes-btn{position:fixed;right:1.1rem;bottom:1.1rem;z-index:70;display:inline-flex;align-items:center;gap:.5rem;
-  background:var(--forest);color:var(--on-forest);border:0;border-radius:100px;padding:.75rem 1.15rem;font:inherit;
-  font-size:.83rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-lg)}
-.notes-btn svg{width:15px;height:15px}
-.notes{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);z-index:90;background:var(--paper);
-  border-left:1px solid var(--line);box-shadow:var(--shadow-lg);padding:1.6rem;overflow-y:auto;
-  transform:translateX(102%);transition:transform .4s cubic-bezier(.2,.7,.3,1)}
-.notes.open{transform:none}
-.notes h3{margin-bottom:.3rem}
-.notes .close{position:absolute;top:1.1rem;right:1.1rem;background:none;border:0;cursor:pointer;color:var(--ink-2);font-size:1.4rem;line-height:1}
-.notes ol{padding-left:1.1rem;margin:1.4rem 0 0;display:flex;flex-direction:column;gap:1.1rem}
-.notes li{font-size:.9rem;color:var(--ink-2)}
-.notes li b{color:var(--ink);display:block;font-family:var(--serif);font-size:1.02rem;font-weight:400;margin-bottom:.15rem}
-@media print{.notes-btn,.notes,.concept{display:none}}
 </style>
 </head>
 <body>
@@ -362,17 +352,10 @@ footer ul a:hover{color:var(--sage)}
 <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
 </defs></svg>
 
-<div class="concept">A <b>design concept</b> for yogamountain.ie — an independent redesign proposal, not the live site.</div>
-
 <header class="hdr" id="hdr"><div class="wrap hdr-in">
   <a class="brand" href="#top" aria-label="Yoga Mountain home">
-    <svg viewBox="0 0 100 100" aria-hidden="true">
-      <circle cx="50" cy="15" r="10" fill="#e8b83c"/>
-      <path d="M32 34h36a18 18 0 0 1-36 0Z" fill="#6f5b7e"/>
-      <path d="M24 52h52a26 26 0 0 1-52 0Z" fill="#7fb0aa"/>
-      <path d="M14 72h72a36 36 0 0 1-72 0Z" fill="#63896f"/>
-    </svg>
-    <span class="brand-txt">Yoga<span>Mountain</span></span>
+    <img class="logo-light" src="assets/logo.png" width="420" height="194" alt="Yoga Mountain">
+    <img class="logo-dark" src="assets/logo-dark.png" width="420" height="194" alt="Yoga Mountain">
   </a>
   <nav class="nav">
     <a href="#classes">Classes</a>
@@ -658,7 +641,7 @@ footer ul a:hover{color:var(--sage)}
         </div>
         <div class="field"><label for="m">Message</label><textarea id="m" name="message" placeholder="A little about your experience, and anything you're working around…"></textarea></div>
         <button class="btn btn-light" type="submit">Send enquiry <svg class="arw" width="16" height="16"><use href="#i-arrow"/></svg></button>
-        <p class="f-note" id="formNote">Demo form — this is a design concept, nothing is sent.</p>
+        <p class="f-note" id="formNote">Preview form — nothing is sent yet.</p>
       </form>
     </div>
   </div>
@@ -670,13 +653,8 @@ footer ul a:hover{color:var(--sage)}
     <div class="f-top">
       <div class="f-brand">
         <a class="brand" href="#top" aria-label="Yoga Mountain home">
-          <svg viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="15" r="10" fill="#e8b83c"/>
-            <path d="M32 34h36a18 18 0 0 1-36 0Z" fill="#6f5b7e"/>
-            <path d="M24 52h52a26 26 0 0 1-52 0Z" fill="#7fb0aa"/>
-            <path d="M14 72h72a36 36 0 0 1-72 0Z" fill="#63896f"/>
-          </svg>
-          <span class="brand-txt">Yoga<span>Mountain</span></span>
+          <img class="logo-light" src="assets/logo.png" width="420" height="194" alt="Yoga Mountain">
+          <img class="logo-dark" src="assets/logo-dark.png" width="420" height="194" alt="Yoga Mountain">
         </a>
         <p>A passion to inspire everybody to practise and enjoy the benefits of yoga. Based in Co. Wicklow, Ireland.</p>
       </div>
@@ -699,24 +677,6 @@ footer ul a:hover{color:var(--sage)}
   </div>
 </footer>
 
-<button class="notes-btn" id="notesBtn"><svg><use href="#i-leaf"/></svg> Design notes</button>
-<aside class="notes" id="notes" aria-label="Design notes">
-  <button class="close" id="notesClose" aria-label="Close design notes">×</button>
-  <p class="eyebrow" style="margin-bottom:.4rem">Concept rationale</p>
-  <h3>What changed, and why</h3>
-  <ol>
-    <li><b>A real first screen</b>Instead of a page titled “Home” with a poster image, the hero says where you are, what's on and what to do next — in words, not baked into a JPEG.</li>
-    <li><b>Text that Google can read</b>Class times, retreat dates, prices and calls to action are live HTML, not text inside images. Searches for “yoga Enniskerry” can now find them.</li>
-    <li><b>The timetable as a product</b>Days, times, levels and eircodes in a scannable grid — the single thing most visitors came for.</li>
-    <li><b>One retreat, sold properly</b>Itinerary, price ladder and deposit terms in a sticky card, with the early-bird deadline visible.</li>
-    <li><b>Warm, natural palette</b>Sage, forest, oat paper and a saffron accent drawn straight from the existing logo — no linen wallpaper, no boxed 2012 theme frame.</li>
-    <li><b>Type with a voice</b>A serif for headlines and a clean sans for reading, at a comfortable size and line length.</li>
-    <li><b>Built mobile-first</b>Fluid type, a real menu drawer, pinch-zoom no longer disabled, and dark-mode support.</li>
-    <li><b>Accessibility &amp; performance</b>Proper heading order, described images, visible focus rings, reduced-motion support, and photos sized for the web.</li>
-  </ol>
-  <p style="font-size:.82rem;color:var(--ink-3);margin-top:1.6rem">All copy, photography and class details are the site's own, rearranged. Photography by The Visible Business.</p>
-</aside>
-
 <script>
 document.documentElement.classList.add('js');
 (function(){
@@ -730,7 +690,7 @@ document.documentElement.classList.add('js');
   menuBtn.addEventListener('click',function(){setDrawer(true)});
   document.getElementById('closeBtn').addEventListener('click',function(){setDrawer(false)});
   drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setDrawer(false)})});
-  addEventListener('keydown',function(e){ if(e.key==='Escape'){setDrawer(false);setNotes(false);} });
+  addEventListener('keydown',function(e){ if(e.key==='Escape'){setDrawer(false);} });
 
   var root=document.documentElement, tb=document.getElementById('themeBtn');
   tb.addEventListener('click',function(){
@@ -759,15 +719,11 @@ document.documentElement.classList.add('js');
   sweep(); addEventListener('scroll',sweep,{passive:true}); addEventListener('resize',sweep);
   setTimeout(function(){ els.forEach(function(el,i){ show(el,i); }); },2600);
 
-  var notes=document.getElementById('notes');
-  var setNotes=function(open){ notes.classList.toggle('open',open); };
-  document.getElementById('notesBtn').addEventListener('click',function(){setNotes(!notes.classList.contains('open'))});
-  document.getElementById('notesClose').addEventListener('click',function(){setNotes(false)});
 
   document.getElementById('enquiry').addEventListener('submit',function(e){
     e.preventDefault();
     var note=document.getElementById('formNote');
-    note.textContent='This is a design concept — in the live build this would email Hannah and confirm on screen.';
+    note.textContent='Preview only — on the live site this would email Hannah and confirm here.';
     note.style.color='var(--gold)';
   });
 })();
